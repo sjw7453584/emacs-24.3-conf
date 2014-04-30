@@ -7,7 +7,6 @@
 ;;;; 添加Emacs搜索路径
 (add-to-list 'load-path "~/_emacs")
 (add-to-list 'load-path "~/install/ecb-2.40")
-;;(add-to-list 'load-path "~/install/ecb-alexott")
 (add-to-list 'load-path "~/_emacs/codepilot")
 (add-to-list 'load-path "~/_emacs/emacs-eclim")
 (add-to-list 'load-path "~/_emacs/icicles")
@@ -30,11 +29,9 @@
 (load "base.el")
 (load "cyexpand.el")
 (load "cykbd.el")
-;; (load "addon.el")
-;; (load "cedet-settings.el")
-;;(load "init.el")
+(load "addon.el")
 
-;;为了编程的配置
+;; ;;为了编程的配置
 (load "cycode.el")
 
 (require 'smex) ; Not needed if you use package.el
@@ -46,7 +43,8 @@
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
-;; (load "projects.el")
+(load "projects.el")
+(desktop-save-mode 1)
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
