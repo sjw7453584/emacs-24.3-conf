@@ -107,3 +107,7 @@
 
 
 (require 'ggtags)
+
+
+(define-key key-translation-map [S-dead-diaeresis] "\"")
+(define-key key-translation-map [dead-acute] "\'")
