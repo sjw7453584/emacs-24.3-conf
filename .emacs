@@ -96,3 +96,7 @@
 (append '(("CMakeLists\\.txt\\'" . cmake-mode)
 ("\\.cmake\\'" . cmake-mode))
 auto-mode-alist))
+
+(load "graphviz-dot-mode.el") 
+
+(setq graphviz-dot-mode-syntax-table (syntax-table)) 
