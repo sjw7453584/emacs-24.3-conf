@@ -69,7 +69,7 @@
 
 
 (require 'ggtags)
-(require 'stardict)
+(require 'sdcv)
 
 (ansi-color-for-comint-mode-on)
 
@@ -85,7 +85,6 @@
 ;;                       (font-spec :family="WenQuanYi Zen Hei"
 ;;                                  :size 18
 ;; 								 :weight="bold"))
-
 
 (require 'ibus)
 (add-hook 'after-init-hook 'ibus-mode-on)
