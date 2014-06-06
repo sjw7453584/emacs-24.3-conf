@@ -395,7 +395,7 @@ Argument SDCV-STRING the search string from sdcv."
       sdcv-fail-notify-string
     (with-temp-buffer
       (insert sdcv-string)
-      (goto-char (point-max))
+      (goto-char (point-min))
       (kill-line 1)                     ;remove unnecessary information.
       (buffer-string))))
 
@@ -422,7 +422,7 @@ Hide all entry but the first one and goto
 the beginning of the buffer."
   (ignore-errors
     (setq buffer-read-only t)
-    (goto-char (point-max))
+    (goto-char (point-min))
     (sdcv-next-dictionary)
     (show-all)
     (message "Have search finished with `%s'." sdcv-current-translate-object)))
