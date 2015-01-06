@@ -133,9 +133,15 @@ fi
 	do
 	    echo "$DIR/$f"
 	done
+	for f in /usr/include/
+	do
+	    echo "$DIR/$f"
+	done
+
     else
 	find $DIR \( -type f -o -type l \)
-    fi
+	find /usr/include/ \( -type f -o -type l \)
+	fi
 ) | \
     egrep -i '\.([chly](xx|pp)*|cc|hh)$' | \
     sed -e '/\/CVS\//d' -e '/\/RCS\//d' -e 's/^\.\///' | \
