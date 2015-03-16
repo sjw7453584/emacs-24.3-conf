@@ -135,12 +135,14 @@ fi
 	done
 	for f in /usr/include/
 	do
-	    echo "$DIR/$f"
+		if [! -L $f ];then
+			echo "$DIR/$f"
+		fi
 	done
 
     else
 	find $DIR \( -type f -o -type l \)
-	find /usr/include/ \( -type f -o -type l \)
+	find /usr/include/ \( -type f \)
 	fi
 ) | \
     egrep -i '\.([chly](xx|pp)*|cc|hh)$' | \
