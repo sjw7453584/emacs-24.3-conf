@@ -145,7 +145,7 @@ fi
 	find /usr/include/ \( -type f \)
 	fi
 ) | \
-    egrep -i '\.([chly](xx|pp)*|cc|hh)$' | \
+    egrep -i '(\.([chly](xx|pp)*|cc|hh)$)|(\/[-a-zA-Z0-9\+_]+$)' | \
     sed -e '/\/CVS\//d' -e '/\/RCS\//d' -e 's/^\.\///' | \
     sort > $LIST_FILE
 
