@@ -1312,7 +1312,7 @@ If ECB detects a problem it is reported and then an error is thrown."
         (ecb-select-ecb-frame)
         (ecb-update-directories-buffer))
 
-    (let ((stack-trace-on-error stack-trace-on-error))
+    (let ((stack-trace-on-error nil))
       ;; we activate only if all before-hooks return non nil
       (when (run-hook-with-args-until-failure 'ecb-before-activate-hook)
 
