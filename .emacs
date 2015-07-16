@@ -99,3 +99,4 @@ auto-mode-alist))
 (load "graphviz-dot-mode.el") 
 
 (setq graphviz-dot-mode-syntax-table (syntax-table)) 
+(require 'sjw-get-buffer-name-line)
