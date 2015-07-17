@@ -9,4 +9,4 @@
 (buffer-string)
 ))
 )
-(provide 'sjw-get-buffer-name-line)
+(provide 'get-buffer-name-line)
