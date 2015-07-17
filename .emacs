@@ -100,3 +100,4 @@ auto-mode-alist))
 
 (setq graphviz-dot-mode-syntax-table (syntax-table)) 
 (require 'get-buffer-name-line)
+(require 'region_insert_marks)
