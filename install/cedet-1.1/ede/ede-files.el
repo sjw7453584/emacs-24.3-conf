@@ -51,6 +51,20 @@ the current EDE project."
 	     (ede-project-root-directory (ede-current-project))))
     (find-file fname)))
 
+(defun ede-find-file-at-point ()
+  "Find FILE  at point"
+  (interactive)
+  (let ((file "aaa")))
+  (let ((file (thing-at-point 'filename)))
+	(let ((fname (ede-expand-filename (ede-current-project) file))
+	)
+    (unless fname
+      (error "Could not find %s in %s"
+	     file
+	     (ede-project-root-directory (ede-current-project))))
+    (find-file fname)))
+  )
+
 (defun ede-flush-project-hash ()
   "Flush the file locate hash for the current project."
   (interactive)
