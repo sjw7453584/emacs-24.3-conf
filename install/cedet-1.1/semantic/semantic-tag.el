@@ -392,10 +392,16 @@ data type."
      (or
       ;; Matching strings (input type is string)
       (and (stringp type)
-	   (string= tagtypestring type))
+	   (or (string= tagtypestring type)
+		   (and (string= type "class") (string= tagtypestring "struct") )
+		   (and (string= type "struct") (string= tagtypestring "class") )
+		   ))
       ;; Matching strings (tag type is string)
       (and (stringp tagtype)
-	   (string= tagtype typestring))
+	   (or (string= tagtype typestring)
+		   (and (string= typestring "class") (string= tagtype "struct") )
+		   (and (string= typestring "struct") (string= tagtype "class") )
+		   ))
       ;; Matching tokens, and the type of the type is the same.
       (and (string= tagtypestring typestring)
 	   (if (and (semantic-tag-type tagtype) (semantic-tag-type type))
